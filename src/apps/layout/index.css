@@ -123,3 +123,10 @@ header .navbar {
   background-color: #fff;
   height: 900px;
 }
+
+.lx-1 {
+  flex: 1;
+}
+.h-100-p {
+  height: 100%;
+}

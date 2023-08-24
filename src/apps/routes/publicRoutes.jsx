@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { SignIn, SignUp } from "../auth_life";
-import { Dashboard } from "../creator";
+// import { Dashboard } from "../creator";
+import { Dashboard } from "../dashboard";
 import { Gallery, Creator } from "../brand";
 
 const PublicRoute = ({ children }) => {
@@ -14,10 +15,10 @@ const PublicRoute = ({ children }) => {
     if (auth.isAuthenticated) {
       switch (auth.user.level) {
         case 1:
-          navigate("/deals");
+          navigate("/elderly/dashboard");
           break;
         case 2:
-          navigate("/creators");
+          navigate("/volunteer/dashboard");
           break;
         case 3:
           navigate("/myCarets");
@@ -60,6 +61,10 @@ const PublicRoutes = [
     path: "creator/:creator",
     element: <Creator />,
   },
+  {
+    path: "elderly/dashboard",
+    element: <Dashboard />
+  }
 ];
 
 export default PublicRoutes;
