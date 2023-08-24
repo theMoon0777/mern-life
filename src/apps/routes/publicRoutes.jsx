@@ -6,6 +6,7 @@ import { SignIn, SignUp } from "../auth_life";
 // import { Dashboard } from "../creator";
 import { Dashboard } from "../dashboard";
 import { Gallery, Creator } from "../brand";
+import {CreatePost} from "../createpost";
 
 const PublicRoute = ({ children }) => {
   const navigate = useNavigate();
@@ -64,6 +65,10 @@ const PublicRoutes = [
   {
     path: "elderly/dashboard",
     element: <Dashboard />
+  },
+  {
+    path: "elderly/newpost",
+    element: <CreatePost />
   }
 ];
 

@@ -1,8 +1,10 @@
+
 import { PrivateLayout } from "../layout";
 import "./index.css";
 import {Postcomp} from "./components/postcomp"; 
 
 import { Progress, Space } from 'antd';
+import { Link } from "react-router-dom";
 
 export const Dashboard = () => {
 
@@ -40,7 +42,8 @@ export const Dashboard = () => {
                 <div className="lx space-between">
                     <h1>POSTS</h1>
                     <div className="lx align-center">
-                        <button className="new-post-btn font-size-s b-0">+ New Post</button>
+                        <Link to="/elderly/newpost" className="new-post-btn font-size-s b-0">+ New Post</Link>
+                        {/* <a href="/newpost" className="new-post-btn font-size-s b-0">+ New Post</a> */}
                         <select className="date-viewselect b-0 bb-gray ml-s">
                             <option>All Posts</option>
                             <option>Daily</option>
@@ -51,7 +54,7 @@ export const Dashboard = () => {
                     </div>
                     
                 </div>
-                <div className="overflow-auto lx-1">
+                <div className="overflow-auto h-80-vh pr-20">
                     {
                         posts.map(data => {
                             console.log(data);

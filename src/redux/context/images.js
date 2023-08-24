@@ -9,6 +9,7 @@ import shake from "../../images/shake.jpg";
 import facebook from "../../images/facebook.png";
 import apple from "../../images/apple.png";
 import avatar from "../../images/me.jpg";
+import back from "../../images/back.png";
 
 const initialState = {
   iconAgree,
@@ -19,7 +20,8 @@ const initialState = {
   shake,
   facebook,
   apple,
-  avatar
+  avatar,
+  back
 };
 
 const initialContext = {

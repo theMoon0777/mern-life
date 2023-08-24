@@ -61,6 +61,9 @@
   .w-50 {
     width: 50px;
   }
+  .w-100-p {
+    width: 100%;
+  }
   .new-post-btn {
     background-color: #fd3693;
     color: white;
@@ -158,4 +161,39 @@
   }
   .font-weight-bold {
     font-weight: 500;
+  }
+  .h-80-vh {
+    height: 80vh;
+  }
+  .c-g-m {
+    column-gap: 1.5rem;
+  }
+  .c-g-s {
+    column-gap: 0.75rem;
+  }
+  .post-themekind {
+    font-size: 20px;
+  }
+  .baseline {
+    align-items: baseline;
+  }
+  .post-comp-content {
+    padding: 20px 30px 20px 30px;
+  }
+  .viewport-a {
+    color: #fd3693;
+    font-size: 18px;
+    text-underline-offset: 5px;
+  }
+  .post-pending-btn {
+    padding: 15px 20px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+  }
+  .end {
+    align-items: end;
+  }
+  .pr-20 {
+    padding-right: 20px;
   }
