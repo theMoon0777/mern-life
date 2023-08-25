@@ -10,6 +10,16 @@ import facebook from "../../images/facebook.png";
 import apple from "../../images/apple.png";
 import avatar from "../../images/me.jpg";
 import back from "../../images/back.png";
+import tv from "../../images/tv.png";
+import outside from "../../images/outside.png";
+import home from "../../images/home.png";
+import medicine from "../../images/medicine.png";
+import doctor from "../../images/doctor.png";
+import meeting from "../../images/meeting.png";
+import shopping from "../../images/shopping.png";
+import other from "../../images/other.png";
+import girl from "../../images/girl.png";
+import guy from '../../images/guy.png';
 
 const initialState = {
   iconAgree,
@@ -21,7 +31,17 @@ const initialState = {
   facebook,
   apple,
   avatar,
-  back
+  back,
+  tv,
+  outside,
+  home,
+  medicine,
+  doctor,
+  meeting,
+  shopping,
+  other,
+  girl,
+  guy
 };
 
 const initialContext = {

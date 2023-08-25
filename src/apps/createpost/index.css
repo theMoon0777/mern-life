@@ -160,3 +160,7 @@
     animation:inputHighlighter 0.3s ease;
   }
   
+.radio-group {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

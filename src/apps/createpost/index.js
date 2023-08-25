@@ -6,7 +6,11 @@ import React, { useState } from 'react';
 import { Button, message, Steps, theme } from 'antd';
 import {FirstStep} from  "./firstStep";
 import {SecondStep} from  "./secondStep";
-
+import {ThirdStep} from  "./thirdStep";
+import {FirthStep} from  "./firthStep";
+import {LastStep} from  "./lastStep";
+import {actions}  from "../../redux/slices/post";
+import { useDispatch } from "react-redux";
 
 const steps = [
     {
@@ -37,8 +41,15 @@ export const CreatePost = ({}) => {
 
     const [name, setName] = useState("");
     const [member, setMember] = useState("");
+    const [themeskind, setThemeskind] = useState(0);
+    const [themescontent, setThemescontent] = useState("");
+    const [date, setDate] = useState("");
+    const [address , setAddress] = useState("");
+    const [phone, setPhone] = useState("");
 
     const image = useContext(imageContext).state;
+
+    const dispatch = useDispatch();
 
     const { token } = theme.useToken();
     const [current, setCurrent] = useState(0);
@@ -70,6 +81,38 @@ export const CreatePost = ({}) => {
     const storemember = (member) => {
         setMember(member);
     }
+    const storetheme = (theme) => {
+        if(Number.isInteger(theme)) {
+            console.log("kind" + theme);
+            setThemeskind(theme);
+        }
+        else {
+            console.log("content" + theme);
+            setThemescontent(theme)
+        }
+    }
+    const storedate = (data) => {
+        setDate(data);
+    }
+    const storeaddress = (data) => {
+        setAddress(data)
+    }
+    const storephone = (data) => {
+        setPhone(data);
+    }
+    const saveData = () => {
+        let data = {
+            name,
+            member,
+            themeskind,
+            themescontent,
+            date,
+            address,
+            phone
+        };
+        dispatch(actions.createPostStart(data));
+    }
+
     return (
         <>
             <div className="new-post w-100-p h-100-vh">
@@ -80,7 +123,7 @@ export const CreatePost = ({}) => {
                     </div>
                     <div className="new-post-content">
                         <Steps current={current} items={items} />
-                        <div style={contentStyle}>{steps[current].content=="First-content" ? <FirstStep send={storename} data={name}/> : steps[current].content=="Second-content" ? <SecondStep send={storemember} data={member} /> : "" }</div>
+                        <div style={contentStyle}>{steps[current].content=="First-content" ? <FirstStep send={storename} data={name}/> : steps[current].content=="Second-content" ? <SecondStep send={storemember} data={member} /> : steps[current].content=="Third-content" ? <ThirdStep kind = {themeskind} content = {themescontent} send={storetheme}/> :  steps[current].content=="Firth-content" ? <FirthStep data = {date} send = {storedate} /> : steps[current].content=="Last-content" ? <LastStep addressFun = {storeaddress} phoneFun = {storephone} address = {address} phone = {phone} /> : "" }</div>
                         <div
                             style={{
                             marginTop: 24,
@@ -92,8 +135,8 @@ export const CreatePost = ({}) => {
                             </Button>
                             )}
                             {current === steps.length - 1 && (
-                            <Button type="primary" onClick={() => message.success('Processing complete!')}>
-                                Submit
+                            <Button type="primary" onClick={saveData}>
+                                Finally Save
                             </Button>
                             )}
                             {current > 0 && (
