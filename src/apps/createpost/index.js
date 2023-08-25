@@ -103,7 +103,7 @@ export const CreatePost = ({}) => {
     const saveData = () => {
         let data = {
             name,
-            member,
+            participants: member,
             themeskind,
             themescontent,
             date,

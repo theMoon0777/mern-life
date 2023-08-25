@@ -6,9 +6,11 @@ import { commonContext } from "../../../redux/context";
 import Linkbar from "./linkbar";
 
 import { imageContext } from "../../../redux/context";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const { state } = useContext(commonContext);
+  const auth = useSelector(state => { return (state.auth) ? state.auth : "" });
   const image = useContext(imageContext).state;
   let month = "August"
   return (
@@ -20,8 +22,8 @@ const Header = () => {
                     </span>
                     <div className="lx">
                         <div className="lx lx-col align-center center">
-                            <p className="m-0">Wiliwork</p>
-                            <p className="m-0">wiliwork@gmail.com</p>
+                            <p className="m-0">{(auth.user) ? auth.user.name : ""}</p>
+                            <p className="m-0">{(auth.user)? auth.user.email : ""}</p>
                         </div>
                         <div className="lx align-center">
                             <img className="round w-50" src={image.avatar} alt="...loading"/>

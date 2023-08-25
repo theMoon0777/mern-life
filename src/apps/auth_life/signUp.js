@@ -95,8 +95,8 @@ const SignUp = () => {
                             </Form.Item>
                             <Form.Item name="level" rules={formRules.levelRule}>
                                 <Select >
-                                    <Option value="creator">Elderly</Option>
-                                    <Option value="brand">Volunteer</Option>
+                                    <Option value="elderly">Elderly</Option>
+                                    <Option value="volunteer">Volunteer</Option>
                                 </Select>
                             </Form.Item>
                         </div>

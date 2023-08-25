@@ -10,16 +10,32 @@ import { useEffect } from "react";
 
 import {actions} from "../../redux/slices/post";
 
-export const Dashboard = () => {
+export const VolDashboard = () => {
 
     const dispatch = useDispatch();
-    const {posts} = useSelector(state => state.post);
+    const {allposts} = useSelector(state => state.post);
+
+    const {flag} = useSelector(state=> state.post);
 
     useEffect(() => {
-        dispatch(actions.getPostsStart());
+        dispatch(actions.getAllPostsStart());
       }, []);
-  
+    
+    useEffect(() => {
+        dispatch(actions.getAllPostsStart());
+        console.log("+++++++++++++++++++++++++");
+    }, [flag]);
       
+      const taking = (id) => {
+        if(id.slice(0,2) == "un") {
+            dispatch(actions.unsetTakingStart(id.slice(8, id.length)));
+        }
+        else {
+            dispatch(actions.setTakingStart(id.slice(6, id.length)));
+        }
+        dispatch(actions.setflag());
+      }
+
     return (
     <PrivateLayout>
         <div className="lx h-100-p">
@@ -27,8 +43,7 @@ export const Dashboard = () => {
                 <div className="lx space-between">
                     <h1>POSTS</h1>
                     <div className="lx align-center">
-                        <Link to="/elderly/newpost" className="new-post-btn font-size-s b-0">+ New Post</Link>
-                        {/* <a href="/newpost" className="new-post-btn font-size-s b-0">+ New Post</a> */}
+                       
                         <select className="date-viewselect b-0 bb-gray ml-s">
                             <option>All Posts</option>
                             <option>Daily</option>
@@ -41,10 +56,9 @@ export const Dashboard = () => {
                 </div>
                 <div className="overflow-auto h-80-vh pr-20">
                     {
-                        posts.map(data => {
-                            console.log(data);
+                        allposts.map(data => {
                             return (<>
-                                <Postcomp feature = {data} />  
+                                <Postcomp feature = {data} taking = {taking}/>  
                             </>)
                         })
                     }

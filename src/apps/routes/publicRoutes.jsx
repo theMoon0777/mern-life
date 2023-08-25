@@ -62,14 +62,6 @@ const PublicRoutes = [
     path: "creator/:creator",
     element: <Creator />,
   },
-  {
-    path: "elderly/dashboard",
-    element: <Dashboard />
-  },
-  {
-    path: "elderly/newpost",
-    element: <CreatePost />
-  }
 ];
 
 export default PublicRoutes;

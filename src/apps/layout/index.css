@@ -130,3 +130,55 @@ header .navbar {
 .h-100-p {
   height: 100%;
 }
+.sidebar-container {
+  width: 90%;
+  padding-top: 20px;
+  margin: auto;
+}
+.sidebar-logo {
+  width: 100px;
+}
+.signout-btn {
+  background-color: white;
+  color: #fd3693;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+  font-size: 15px;
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.signout-btn:active {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sidebar {
+  margin-top: 40px;
+}
+.sidebar-input {
+  background-color: #fd3693;
+  color: white;
+  border: none;
+  padding: 16px 16px 20px 16px;
+  font-size: 20px;
+  border-bottom: 1px solid white;
+}
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  padding-left: 20px;
+}
+ 
+.sidebar a.active {
+  background-color: #fafafa;
+  color: #fd3693;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #fafafa;
+  color: #fd3693;
+}

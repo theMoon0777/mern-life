@@ -14,6 +14,7 @@ const router = createBrowserRouter([
   ...Routes.Creator,
   ...Routes.Brand,
   ...Routes.Buyer,
+  ...Routes.Dashboard,
 ]);
 
 const Apps = () => {

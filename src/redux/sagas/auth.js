@@ -5,9 +5,8 @@ import { actions } from "../slices/auth";
 
 // Sign in with own email and password saga
 function* signInWithCredentials({ payload: { email, password } }) {
-  console.log(email, password);
   try {
-    const res = yield api.post("/signIn", { email, password });
+    const res = yield api.post("/signin", { email, password });
     const { token } = !!res.data.token ? res.data : null;
     localStorage.token = token;
     yield put(actions.signInSuccess(token));
@@ -18,9 +17,8 @@ function* signInWithCredentials({ payload: { email, password } }) {
 
 // Sign up with own info saga
 function* signUp({ payload }) {
-  console.log("sdfads");
   try {
-    const res = yield api.post("/signUp", payload);
+    const res = yield api.post("/signup", payload);
     const { email, password } = payload;
     yield put(actions.signUpSuccess(res.data));
     yield put(actions.signInStart({ email, password }));
