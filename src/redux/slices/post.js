@@ -38,6 +38,19 @@ const postSlice = createSlice({
             state.loading = false;
             state.error = payload;
         },
+        getPostStart: state => {
+            state.loading = true;
+            state.error = null;
+        },
+        getPostSuccess: (state, {payload}) => {
+            state.loading = false;
+            state.error = null;
+            state.post = payload;
+        },
+        getPostFailure: (state, {payload}) => {
+            state.loading = false;
+            state.error = payload;
+        },
         getAllPostsStart: state => {
             state.loading = true;
             state.error = null;

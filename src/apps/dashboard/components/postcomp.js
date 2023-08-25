@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Postcomp = ({feature}) => {
     console.log(feature.status);
     let first = feature.name.slice(0,1);
@@ -40,6 +42,7 @@ export const Postcomp = ({feature}) => {
                 <div className="lx space-between end">
                     <div>
                         <a className="viewport-a" href="#">View Post</a>
+                        {feature.status ===0 ? "" : <Link to={"/chatroom/" + feature._id} className="viewport-a" href="#">ChatRoom</Link> }
                     </div>
                     <div>
                         <button style={{"background-color": color}} className="post-pending-btn">{feature.status === 0 ? "Pending" : "accepted" }</button>

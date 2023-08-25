@@ -23,7 +23,6 @@ export const VolDashboard = () => {
     
     useEffect(() => {
         dispatch(actions.getAllPostsStart());
-        console.log("+++++++++++++++++++++++++");
     }, [flag]);
       
       const taking = (id) => {

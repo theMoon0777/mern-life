@@ -23,6 +23,16 @@ function* getPosts() {
     }
 }
 
+function* getPost(payload) {
+    try {
+        const res = yield api.get("/post/"+ payload.payload);
+        yield put(actions.getPostSuccess(res.data));
+    }
+    catch(err) {
+        yield put(actions.getPostFailure(err.response.data));
+    }
+}
+
 function* getAllPosts() {
     try {
         const res = yield api.get("/posts");
@@ -60,4 +70,6 @@ export default function* authSagas() {
   yield takeLatest("post/setTakingStart", setTaking);
   yield takeLatest("post/unsetTakingStart", unsetTaking);
   
+  yield takeLatest("post/getPostStart", getPost);
+
 }
