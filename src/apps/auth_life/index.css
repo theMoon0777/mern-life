@@ -273,4 +273,26 @@
         border-radius: 1px ;
         padding: 0px ;
     }
+    .signup-p {
+        margin: 5px;
+        font-size: 15px !important;
+    }
+    .group {
+        margin-bottom: 10px;
+    }
+    .via-email-content {
+        width: 90%;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .input1 {
+        width: auto !important;
+        background-color: white !important;
+    }
+    .bar {
+        width: 200px !important;
+    }
+    .signup-main {
+        padding-bottom: 10px !important;
+    }
 }
