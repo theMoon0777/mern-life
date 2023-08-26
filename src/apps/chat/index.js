@@ -8,18 +8,26 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 
 import {actions} from "../../redux/slices/post";
+import { MsgComp } from "./msgcomp";
+import io from "socket.io-client";
+// const socket = io.connect('http://localhost:5000');
 
 export const Chat = (props) => {
     const routerParams = useParams();
     const {id} = routerParams;
 
+    // var setId = setInterval(() => {
+    //     dispatch(actions.getMsgStart(id));
+    // }, 2000);
+
     useEffect(() => {
         dispatch(actions.getPostStart(id));
-        // dispatch(actions.getMsgStart(id));
+        dispatch(actions.getMsgStart(id));
       }, []);
     const [msgcontent, setMsgcontent] = useState("");
     
     const {user} = useSelector(state => state.auth)
+    const {msgs} = useSelector(state => state.post.msgs);
     const dispatch = useDispatch();
     const category = [
       'Technological',
@@ -55,6 +63,10 @@ export const Chat = (props) => {
             content: msgcontent
         };
         dispatch(actions.postMsgStart(data));
+        setMsgcontent("");
+        
+
+        // socket.emit("sent");
     }
 
     return (
@@ -68,7 +80,26 @@ export const Chat = (props) => {
             </div>
             <div className="lx lx-col lx-1">
                 <div className="chat-content">
-
+                    { (!msgs) ? "" : msgs.map(data => {
+                        if(user) {
+                            if(data.from == user.id) {
+                                return (
+                                    <>
+                                        <span style={{"color": "red"}}>Sent</span>
+                                        <MsgComp feature = {data} />
+                                    </>
+                                )
+                            }
+                            else {
+                                return (
+                                    <>
+                                        <span style={{"color": "blue"}}>Received</span>
+                                        <MsgComp feature = {data} />
+                                    </>
+                                )
+                            }
+                        }
+                    })}
                 </div>
                 <div className="lx">
                     <input className="chat-input lx-1" value={msgcontent} onChange={e => setMsgcontent(e.target.value)}/>

@@ -67,7 +67,7 @@ function* sendMsg({payload}) {
 // get msg
 function* getMsg({payload}) {
     try {
-        const res = yield api.get("/msg/:" + payload);
+        const res = yield api.get("/msg/" + payload);
         yield put(actions.getMsgSuccess(res.data));
     }
     catch(err) {
