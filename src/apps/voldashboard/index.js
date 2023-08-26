@@ -15,6 +15,13 @@ export const VolDashboard = () => {
     const dispatch = useDispatch();
     const {allposts} = useSelector(state => state.post);
 
+    let acceptedCount = 0 ;
+    allposts.map(data => {
+        if(data.status == 1) {
+            acceptedCount++;
+        }
+    });
+
     const {flag} = useSelector(state=> state.post);
 
     useEffect(() => {
@@ -77,17 +84,9 @@ export const VolDashboard = () => {
                         </select>
                     </div>
                     <div className="circle-body">
-                        <div className="circle-body-content">
-                            <Space wrap>
-                                <Progress type="circle" percent={71} />
-                            </Space>
-                        </div>
-                        <div className="circle-body-support lx lx-col align-center">
-                            <p className="">System Status</p>
-                            <div className="lx align-center">
-                                <div className="radio-color-div"></div>
-                                <span className="ml-xs font-weight-bold">OPTIMUM</span>
-                            </div>
+                        <h3 className="total-h">You totally accepted</h3>
+                        <div className="circle-div">
+                            {acceptedCount}
                         </div>
                     </div>
                 </div>

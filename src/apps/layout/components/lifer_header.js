@@ -25,9 +25,6 @@ const Header = () => {
                             <p className="m-0">{(auth.user) ? auth.user.name : ""}</p>
                             <p className="m-0">{(auth.user)? auth.user.email : ""}</p>
                         </div>
-                        <div className="lx align-center">
-                            <img className="round w-50" src={image.avatar} alt="...loading"/>
-                        </div>
                     </div>
                 </div>
             </div>

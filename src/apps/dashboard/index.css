@@ -82,6 +82,9 @@
   .ml-s {
     margin-left: 15px;
   }
+  .ml-m {
+    margin-left: 30px;
+  }
   .date-viewselect {
     color: #fd3693;
     font-size: 18px;
@@ -130,26 +133,13 @@
     padding: 15px;
   }
   .circle-body {
-    margin-top: 30px;
+    margin-top: 50px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .circle-body-content {
-    padding-left: 50px;
-  }
-  .circle-body-support {
-    padding-left: 40px;
-  }
-  .ant-progress-inner {
-    width: 200px !important;
-    height: 200px !important;
-  }
-  .ant-progress-circle-path {
-    stroke: #7eecbe !important;
-  }
-  .ant-progress-text {
-    font-size: 50px !important;
-    color: #fd3693 !important;
-  }
+
   .radio-color-div {
     width: 15px;
     height: 15px;
@@ -197,4 +187,22 @@
   }
   .pr-20 {
     padding-right: 20px;
+  }
+  .total-h {
+    color: #fd3693;
+  }
+  .circle-div {
+    margin-top: 20px;
+    border: 5px solid #fd3693;
+    border-radius: 999px;
+    text-align: center;
+    color: #fd3693;
+    background-color: white;
+    font-size: 80px;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+  }
+  .font-size-l {
+    font-size: 50px;
   }

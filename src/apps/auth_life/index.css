@@ -2,7 +2,6 @@
     background-image: url('./form-back.png');
     width: 100%;
     height: 100vh;
-    padding: 50px 0px;
 }
 .signin-form-container {
     display: flex;
@@ -12,10 +11,14 @@
 .signin-main {
     background-color: white;
     width: 80%;
-    margin: 0px auto;
+    height: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0px;
     display: flex;
+    position: absolute;
     flex-direction: row;
-    padding-bottom: 50px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -215,84 +218,11 @@
     -moz-animation:inputHighlighter 0.3s ease;
     animation:inputHighlighter 0.3s ease;
   }
-#lifeForm_email {
-    border-radius: 1px;
-}
+  
+
 @media only screen and (max-width: 1175px) {
     .signin-shake {
         display: none;
     }
 }
 
-@media only screen and (max-width: 640px) {
-    .signin-shake {
-        display: none;
-    }
-    .signin-btn {
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
-}
-
-
-@media all and (orientation:landscape) {
-    .signin-container {
-        background-image: url('./form-back.png');
-        width: 100%;
-    }
-    .form-avatar {
-        height: 80px;
-    }
-    .sign-in-p {
-        margin: 0px;
-        font-size: 15px;
-    }
-    .link-div {
-        display: none;
-    }
-    .via-email-div {
-        margin: 20px auto;
-    }
-    .email-p {
-        margin: 3px;
-    }
-    #lifeForm_email {
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 12px;
-    }
-    .password-p {
-        margin: 3px
-    }
-    #lifeForm_password {
-        padding: 5px 10px;
-        border-radius: 2px;
-        font-size: 12px;
-    }
-    .ant-input-affix-wrapper {
-        border-radius: 1px ;
-        padding: 0px ;
-    }
-    .signup-p {
-        margin: 5px;
-        font-size: 15px !important;
-    }
-    .group {
-        margin-bottom: 10px;
-    }
-    .via-email-content {
-        width: 90%;
-        display: grid;
-        grid-template-columns: auto auto;
-    }
-    .input1 {
-        width: auto !important;
-        background-color: white !important;
-    }
-    .bar {
-        width: 200px !important;
-    }
-    .signup-main {
-        padding-bottom: 10px !important;
-    }
-}

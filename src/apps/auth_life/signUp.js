@@ -29,7 +29,7 @@ const SignUp = () => {
 
     return (
         <div className="signin-container">
-            <div className="signin-main signup-main">
+            <div className="signin-main">
                 <div className="signin-form-container">
                     <div>
                         <span>
@@ -42,12 +42,12 @@ const SignUp = () => {
                         onFinish = {onFinish}
                         scrollToFirstError
                     >
-                        <p className="text-center font-size-m signup-p">Ready to start?</p>
+                        <p className="text-center font-size-m">Ready to start?</p>
 
                         <div className="via-email-content">
                             <Form.Item name="name" rules={formRules.nameRule}>
                                 <div className="group">      
-                                    <input className="input input1" type="text" required />
+                                    <input className="input" type="text" required />
                                     <span className="highlight"></span>
                                     <span className="bar"></span>
                                     <label>Full Name</label>
@@ -55,7 +55,7 @@ const SignUp = () => {
                             </Form.Item>
                             <Form.Item name="email" rules={formRules.emailRule}>
                                 <div className="group">      
-                                    <input className="input input1" type="text" required />
+                                    <input className="input" type="text" required />
                                     <span className="highlight"></span>
                                     <span className="bar"></span>
                                     <label>Email</label>
@@ -64,7 +64,7 @@ const SignUp = () => {
                            
                             <Form.Item name="password" rules={formRules.passwordRule}>
                                 <div className="group">      
-                                    <input className="input input1" type="password" required />
+                                    <input className="input" type="password" required />
                                     <span className="highlight"></span>
                                     <span className="bar"></span>
                                     <label>Password</label>
@@ -87,7 +87,7 @@ const SignUp = () => {
                                 ]}
                                 >
                                 <div className="group">      
-                                    <input className="input input1" type="password" required />
+                                    <input className="input" type="password" required />
                                     <span className="highlight"></span>
                                     <span className="bar"></span>
                                     <label>Confirm Password</label>

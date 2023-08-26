@@ -89,7 +89,7 @@ export const Chat = (props) => {
                             if(data.from == user.id) {
                                 return (
                                     <div style={{"textAlign": "left"}}>
-                                        <span style={{"color": "red"}}>Sent</span>
+                                        <span style={{"color": "red"}}>{user.name}</span>
                                         <MsgComp feature = {data} />
                                     </div>
                                 )
@@ -97,7 +97,7 @@ export const Chat = (props) => {
                             else {
                                 return (
                                     <div style={{"textAlign": "right"}}>
-                                        <span style={{"color": "blue"}}>Received</span>
+                                        <span style={{"color": "blue"}}>{data.to.name}</span>
                                         <MsgComp feature = {data} />
                                     </div>
                                 )

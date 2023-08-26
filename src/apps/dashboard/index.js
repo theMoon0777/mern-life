@@ -64,17 +64,9 @@ export const Dashboard = () => {
                         </select>
                     </div>
                     <div className="circle-body">
-                        <div className="circle-body-content">
-                            <Space wrap>
-                                <Progress type="circle" percent={71} />
-                            </Space>
-                        </div>
-                        <div className="circle-body-support lx lx-col align-center">
-                            <p className="">System Status</p>
-                            <div className="lx align-center">
-                                <div className="radio-color-div"></div>
-                                <span className="ml-xs font-weight-bold">OPTIMUM</span>
-                            </div>
+                        <h3 className="total-h">Total Posted Number</h3>
+                        <div className="circle-div">
+                            {posts.length}
                         </div>
                     </div>
                 </div>
