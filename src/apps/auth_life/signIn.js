@@ -33,7 +33,7 @@ const SignIn = () => {
                         onFinishFailed = {onFinishFailed}
                         autoComplete = "off"
                     >
-                        <p className="text-center font-size-m">Sign In</p>
+                        <p className="sign-in-p text-center font-size-m">Sign In</p>
                         <span className="link-div">
                             <div className="each-link">
                                 <a href="https://facebook.com">
@@ -55,11 +55,11 @@ const SignIn = () => {
                             <div className = "via-span pl-20 pr-20 absolute">or Via email</div>
                         </div>
                         <div className="via-email-content">
-                            <p>Email</p>
+                            <p className="email-p">Email</p>
                             <Form.Item name="email" rules={form.emailRule}>
                                 <Input className="signin-input" placeholder="Anyone123@gmail.com"/>
                             </Form.Item>
-                            <p>Password</p>
+                            <p className="password-p">Password</p>
                             <Form.Item name="password" rules={form.passwordRule}>
                                 <Input.Password className="signin-input" placeholder="Enter your Password"/>
                             </Form.Item>

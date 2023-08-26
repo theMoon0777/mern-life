@@ -23,6 +23,8 @@ export const Chat = (props) => {
     useEffect(() => {
         dispatch(actions.getPostStart(id));
         dispatch(actions.getMsgStart(id));
+        // socket.emit("sent");
+
       }, []);
     const [msgcontent, setMsgcontent] = useState("");
     
@@ -64,9 +66,11 @@ export const Chat = (props) => {
         };
         dispatch(actions.postMsgStart(data));
         setMsgcontent("");
-        
+        // io.on("connection", (socket) => {
+        //     // socket.emit("sent");
+        //     console.log("sdafdsf");            
+        // })
 
-        // socket.emit("sent");
     }
 
     return (
@@ -84,18 +88,18 @@ export const Chat = (props) => {
                         if(user) {
                             if(data.from == user.id) {
                                 return (
-                                    <>
+                                    <div style={{"textAlign": "left"}}>
                                         <span style={{"color": "red"}}>Sent</span>
                                         <MsgComp feature = {data} />
-                                    </>
+                                    </div>
                                 )
                             }
                             else {
                                 return (
-                                    <>
+                                    <div style={{"textAlign": "right"}}>
                                         <span style={{"color": "blue"}}>Received</span>
                                         <MsgComp feature = {data} />
-                                    </>
+                                    </div>
                                 )
                             }
                         }

@@ -4,16 +4,12 @@ import { useDispatch } from "react-redux";
 
 import { setAuthToken } from "../redux/utils";
 import { actions } from "../redux/slices/auth";
-import Landing from "./landing";
 import SignInLifeer from "./auth_life/signIn";
 import * as Routes from "./routes";
 
 const router = createBrowserRouter([
   { path: "/", element: <SignInLifeer /> },
   ...Routes.Public,
-  ...Routes.Creator,
-  ...Routes.Brand,
-  ...Routes.Buyer,
   ...Routes.Dashboard,
   ...Routes.Chat,
 ]);

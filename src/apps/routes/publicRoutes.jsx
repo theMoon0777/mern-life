@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 import { SignIn, SignUp } from "../auth_life";
 // import { Dashboard } from "../creator";
 import { Dashboard } from "../dashboard";
-import { Gallery, Creator } from "../brand";
 import {CreatePost} from "../createpost";
 
 const PublicRoute = ({ children }) => {
@@ -54,14 +53,7 @@ const PublicRoutes = [
     path: "deals",
     element: <Dashboard />,
   },
-  {
-    path: "creators",
-    element: <Gallery />,
-  },
-  {
-    path: "creator/:creator",
-    element: <Creator />,
-  },
+
 ];
 
 export default PublicRoutes;
