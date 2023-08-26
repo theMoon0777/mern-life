@@ -53,6 +53,28 @@ function* setTaking({payload}) {
     }
 }
 
+// send Msg Part
+function* sendMsg({payload}) {
+    try {
+        const res = yield api.post("/msg", {payload});
+        // yield put(actions.setTakingSuccess(res.data));
+    }
+    catch(err) {
+        // yield put(actions.setTakingsFailure(err.response.data));
+    }
+}
+
+// get msg
+function* getMsg({payload}) {
+    try {
+        const res = yield api.get("/msg/:" + payload);
+        yield put(actions.getMsgSuccess(res.data));
+    }
+    catch(err) {
+        yield put(actions.getMsgFailure(err.response.data));
+    }
+}
+
 function* unsetTaking({payload}) {
     try {
         const res = yield api.post("/posts/unsettaking", {payload});
@@ -70,6 +92,9 @@ export default function* authSagas() {
   yield takeLatest("post/setTakingStart", setTaking);
   yield takeLatest("post/unsetTakingStart", unsetTaking);
   
+  yield takeLatest("post/postMsgStart", sendMsg);
+  yield takeLatest("post/getMsgStart", getMsg);
+
   yield takeLatest("post/getPostStart", getPost);
 
 }

@@ -4,6 +4,7 @@ const initialState = {
     posts: [],
     allposts: [],
     post: {},
+    msgs: [],
     loading: false,
     error: null,
     flag: false,
@@ -90,7 +91,25 @@ const postSlice = createSlice({
         },
         setflag : state => {
             state.flag = !state.flag;
+        },
+        postMsgStart: state => {
+            state.loading = false;
+            state.error = null;
+        },
+        getMsgStart: state => {
+            state.loading = true;
+            state.error = null;
+        },
+        getMsgSuccess: (state, {payload}) => {
+            state.loading = false;
+            state.msgs = payload;
+            state.error = null;
+        },
+        getMsgFailure: (state, {payload}) => {
+            state.loading = false;
+            state.error = payload;
         }
+
     }
 });
 

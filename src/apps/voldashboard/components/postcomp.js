@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Postcomp = (props, {feature}) => {
     let first = props.feature.name.slice(0,1);
     let color = "";
@@ -46,6 +48,8 @@ export const Postcomp = (props, {feature}) => {
                     <div>
                         <a className="viewport-a" href="#">View Post</a>
                         {props.feature.status != 0 ? <button id={props.feature._id} onClick={unsetTaking} className="viewport-btn" href="#">Cancel</button> : "" }
+                        {props.feature.status ===0 ? "" : <Link to={"/chatroom/" + props.feature._id} className="viewport-a" href="#">ChatRoom</Link> }
+
                     </div>
                     <div>
                         {props.feature.status == 0 ? <button id={props.feature._id} style={{"background-color": "dodgerblue"}} onClick={taking} className="post-taking-btn">Taking</button> : "" }

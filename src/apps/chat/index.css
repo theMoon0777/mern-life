@@ -49,3 +49,8 @@
 .lx-1 {
     flex: 1;
 }
+.chat-content {
+    height: 550px;
+    overflow: auto;
+    padding: 50px 20px;
+}
