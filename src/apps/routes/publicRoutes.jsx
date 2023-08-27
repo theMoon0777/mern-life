@@ -20,10 +20,8 @@ const PublicRoute = ({ children }) => {
         case 2:
           navigate("/volunteer/dashboard");
           break;
-        case 3:
-          navigate("/myCarets");
-          break;
-        default:
+        case 0:
+          navigate("/admin/dashboard");
           break;
       }
     }

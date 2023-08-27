@@ -4,7 +4,9 @@ import auth from "./auth";
 import deal from "./deal";
 import profile from "./profile";
 import post from "./post";
+import support from "./support";
+
 
 export default function* rootSaga() {
-  yield all([auth(), deal(), profile(), post()]);
+  yield all([auth(), deal(), profile(), post(), support()]);
 }

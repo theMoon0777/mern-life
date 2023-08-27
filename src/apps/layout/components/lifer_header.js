@@ -24,7 +24,6 @@ const Header = () => {
         "December"
     ];
     const month_cur = new Date().getMonth();
-    console.log("THIS IS HEARder part", month_cur);
     const day_cur = new Date().getDate();
   const { state } = useContext(commonContext);
   const auth = useSelector(state => { return (state.auth) ? state.auth : "" });

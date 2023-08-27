@@ -1,7 +1,5 @@
 import { createContext } from "react";
 
-import iconAgree from "../../images/icon-agree.jpg";
-import iconSponsor from "../../images/icon-sponsor.png";
 import linkedinImage from "../../images/linkedin.png";
 import googleImage from "../../images/google1.png";
 import helpMe from "../../images/help.png";
@@ -22,8 +20,6 @@ import girl from "../../images/girl.png";
 import guy from '../../images/guy.png';
 
 const initialState = {
-  iconAgree,
-  iconSponsor,
   linkedinImage,
   googleImage,
   helpMe,

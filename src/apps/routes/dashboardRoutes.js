@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 
 import { Dashboard } from "../dashboard";
 import { VolDashboard } from "../voldashboard";
+import { Admin } from "../admin";
 
 import {CreatePost} from "../createpost";
 
@@ -22,6 +23,9 @@ const DashboardRoute = ({ children }) => {
             case 2:
                 navigate("/volunteer/dashboard");
                 break;
+            case 0:
+              navigate("/admin/dashboard");
+              break;
         }
       };
     }, [navigate, auth]);
@@ -49,6 +53,14 @@ const DashboardRoute = ({ children }) => {
         element: (
             <DashboardRoute>
                 <VolDashboard />
+            </DashboardRoute>
+        )
+      },
+      {
+        path: "admin/dashboard",
+        element: (
+            <DashboardRoute>
+                <Admin />
             </DashboardRoute>
         )
       }

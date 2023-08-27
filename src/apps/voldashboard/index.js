@@ -90,12 +90,7 @@ export const VolDashboard = () => {
                         </div>
                     </div>
                 </div>
-                <div className="support-div">
-                    To send Message to support team, Please click here;
-                    <div className="lx">
-                        <button className="send-request-btn">Send Request</button>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </PrivateLayout>

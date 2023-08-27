@@ -12,6 +12,8 @@ const router = createBrowserRouter([
   ...Routes.Public,
   ...Routes.Dashboard,
   ...Routes.Chat,
+  ...Routes.Support,
+  ...Routes.User,
 ]);
 
 const Apps = () => {
