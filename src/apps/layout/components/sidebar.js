@@ -23,7 +23,7 @@ const Sidebar = () => {
             <input className="sidebar-input" placeholder="search" />
             <Link  href="#home">Home</Link>
             <Link  href="#home">Posts</Link>
-            <Link  href="#home">Charts</Link>
+            <Link  href="#home">Support</Link>
             {/* <SiderElements /> */}
             <button onClick={signout} className="signout-btn">SignOut</button>
             </div>

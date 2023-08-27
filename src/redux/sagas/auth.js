@@ -11,7 +11,7 @@ function* signInWithCredentials({ payload: { email, password } }) {
     localStorage.token = token;
     yield put(actions.signInSuccess(token));
   } catch (err) {
-    yield put(actions.signInFailure(err.response.data));
+    yield put(actions.signInFailure(err.response ? err.response.data: ""));
   }
 }
 

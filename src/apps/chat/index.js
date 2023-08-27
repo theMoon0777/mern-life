@@ -76,7 +76,7 @@ export const Chat = (props) => {
     return (
     <PrivateLayout>
         <div className="chat-container lx lx-col">
-            <Link to="/elderly/dashboard">Back</Link>
+            <Link className="chat-btn-back" to="/elderly/dashboard">Back</Link>
             <div className="chat-des">
                 <h2>{category[(post[0]) ? post[0].themeskind: 0]}</h2>
                 <h4>{(post[0]) ? post[0].themescontent : ""}</h4>
