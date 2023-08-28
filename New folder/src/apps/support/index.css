@@ -1,0 +1,62 @@
+.support-container {
+    width: 100%;
+    padding-top: 50px ;
+}
+.support-body {
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 10px 10px;
+}
+.support-body-part {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.support-control {
+    flex: auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: #fd3696;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.support-label {
+    position: initial;
+    color: #fd3696;
+    margin-bottom: 10px;
+}
+.textarea {
+    row-gap: 0.75rem;
+}
+.support-btn {
+    background-color: #fd3696;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0px 10px 0px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+.support-btn:active {
+    background-color: white;
+    color: #fd3696;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+}
+.support-back {
+    background-color: white;
+    color: #fd3696;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+}

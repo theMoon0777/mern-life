@@ -1,0 +1,228 @@
+.signin-container {
+    background-image: url('./form-back.png');
+    width: 100%;
+    height: 100vh;
+}
+.signin-form-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.signin-main {
+    background-color: white;
+    width: 80%;
+    height: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0px;
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+.signin-shake {
+    flex: 1;
+    position: relative;
+    background-color: #eee;
+}
+.shake-form-img {
+    width: 100%;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+.form-avatar {
+    height: 150px;
+}
+.link-div {
+    display: flex;
+    justify-content: center;
+}
+.each-link {
+    border-radius: 999px;
+    background-color: #eee;
+    height: 60px;
+    width: 60px;
+    padding-top: 12px;
+    padding-left: 12px;
+    margin: 0px 10px;
+}
+.text-center {
+    text-align: center;
+}
+.font-size-m {
+    font-size: 25px;
+}
+.font-size-s {
+    font-size: 15px;
+}
+.font-size-xs {
+    font-size: 10px;
+}
+.via-email-div {
+    border-top: 1px solid #ddd;
+    z-index: 1;
+    width: 60%;
+    margin: 30px auto;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.lx {
+    display: flex;
+}
+.via-span {
+    transform: translateX(-50%);
+    left: 50%;
+    top: -15px;
+    z-index: 2;
+    background-color: white;
+    color: #ccc;
+}
+.pt-20 {
+    padding-top: 20px;
+}
+.pl-20 {
+    padding-left: 20px;
+}
+.pr-20 {
+    padding-right: 20px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+#lifeform {
+    padding: 0px 20px ;
+}
+.via-email-content {
+    width: 60%;
+    margin: auto;
+}
+.signin-input {
+    background-color: #eee;
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+.ant-input {
+    background-color: #eee !important;
+}
+.ant-form-item {
+    margin-bottom: 10px !important;
+}
+.w-60-p {
+    width: 60%;
+}
+.margin-auto {
+    margin: auto;
+}
+.signin-btn {
+    background-color: #1877f2;
+    color: white;
+    font-size: 15px;
+    border-radius: 15px;
+    padding: 15px 25px;
+    border-radius: 25px;
+}
+.end {
+    justify-content: end;
+}
+.flex-end {
+    align-items: flex-end;
+}
+.flex-auto {
+    flex: auto;
+}
+
+.group 			  { 
+    position:relative; 
+    margin-bottom:45px; 
+  }
+  .input 				{
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width: 100%;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+  .input:focus 		{ outline:none; }
+  
+  /* LABEL ======================================= */
+  label 				 {
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  .input:focus ~ label, .input:valid ~ label 		{
+    top:-20px;
+    font-size:14px;
+    color:#5264AE;
+  }
+  
+  /* BOTTOM BARS ================================= */
+  .bar 	{ position:relative; display:block; width:300px; }
+  .bar:before, .bar:after 	{
+    content:'';
+    height:1px; 
+    width: 0px;
+    bottom:0.1px; 
+    position:absolute;
+    background:#5264AE; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  .bar:before {
+    left:50%;
+  }
+  .bar:after {
+    right:50%; 
+  }
+  
+  /* active state */
+  .input:focus ~ .bar:before, .input:focus ~ .bar:after {
+    width:51%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:110px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  /* active state */
+  .input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+
+@media only screen and (max-width: 1175px) {
+    .signin-shake {
+        display: none;
+    }
+}
+

@@ -1,0 +1,21 @@
+.posts-container {
+    padding-top: 50px;
+}
+.posts-h {
+    margin: 0px;
+    text-align: center;
+    color: #fd3696;
+}
+.admin-back {
+    background-color: #fd3696;
+    color: aliceblue;
+    padding: 10px 15px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.admin-back-div {
+    margin-bottom: 20px;
+}

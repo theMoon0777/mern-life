@@ -1,0 +1,184 @@
+#root {
+  height: 100vh;
+}
+
+.container {
+  margin: 0 10%;
+}
+
+.app-container {
+  width: -webkit-fill-available;
+  padding: 3%;
+  margin-left: 250px;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-between;
+}
+
+.big-btn {
+  font-size: 18px;
+  color: #fff;
+  width: 150px;
+  background: #1677ff;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.big-black-btn {
+  font-size: 20px;
+  color: #fff;
+  width: 150px;
+  background: rgba(31, 41, 55, 0.9);
+  padding: 5px 0 8px;
+  border: 1px solid rgba(31, 41, 55, 0.9);
+  border-radius: 10px;
+  margin: 0 5%;
+}
+
+.black-btn {
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  width: 150px;
+  background: rgba(31, 41, 55, 0.9);
+  padding: 7px 4px 8px;
+  border: 1px solid rgba(31, 41, 55, 0.9);
+  border-radius: 10px;
+  margin: 0 2%;
+  cursor: pointer;
+}
+
+.center-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Common Header */
+header {
+  background: #fff;
+  padding: 20px 0;
+  border-bottom: 3px solid #ddd;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#appLogo {
+  float: left;
+  margin: 20px 0;
+}
+
+#appLogo a {
+  display: flex;
+  align-items: center;
+}
+
+#appLogo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+#appLogo h1 {
+  font-size: 40px;
+  color: #000;
+  margin: 0 0 0 4%;
+}
+
+header .navbar {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+
+/* Common Sider */
+#appMain {
+  display: flex;
+}
+
+#appSider {
+  position: fixed;
+  height: 100%;
+  min-width: 250px;
+  border-right: 1px solid #ddd;
+  box-shadow: 7px 0px 5px #ddd;
+}
+
+#appSider .container > ul {
+  position: fixed;
+  padding: 0;
+}
+
+#appSider ul li {
+  list-style: none;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Common Main */
+#mainLanding {
+  background-color: #fff;
+  height: 900px;
+}
+
+.lx-1 {
+  flex: 1;
+}
+.h-100-p {
+  height: 100%;
+}
+.sidebar-container {
+  width: 90%;
+  padding-top: 20px;
+  margin: auto;
+}
+.sidebar-logo {
+  width: 100px;
+}
+.signout-btn {
+  background-color: white;
+  color: #fd3693;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+  font-size: 15px;
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.signout-btn:active {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sidebar {
+  margin-top: 40px;
+}
+.sidebar-input {
+  background-color: #fd3693;
+  color: white;
+  border: none;
+  padding: 16px 16px 20px 16px;
+  font-size: 20px;
+  border-bottom: 1px solid white;
+}
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  padding-left: 20px;
+}
+ 
+.sidebar a.active {
+  background-color: #fafafa;
+  color: #fd3693;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #fafafa;
+  color: #fd3693;
+}
